@@ -1,0 +1,21 @@
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+version: '2'
+
+networks:
+  test:
+
+services:
+
+  hdfc_app:
+    image: hdfcapp:1.1
+    ports:
+      - "3000:3000"
+    volumes:
+      - ../organizations/peerOrganizations/hdfc.example.com:/hdfcapp/certs
+    container_name: hdfc_app
+    networks:
+      - test

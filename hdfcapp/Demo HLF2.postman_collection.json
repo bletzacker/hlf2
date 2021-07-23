@@ -1,0 +1,539 @@
+{
+	"info": {
+		"_postman_id": "2b12b986-191b-4ab5-80cb-5bc07766c474",
+		"name": "Demo HLF2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "0 Enroll & register",
+			"item": [
+				{
+					"name": "01 Enroll HDFC CA Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/hdfc/enroll/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hdfc",
+								"enroll",
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "02 calvin register and enroll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"userAffiliation\": \"hdfc.user\",\n  \"userAddress\":\"World of comics,HDFC\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api/hdfc/calvin",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"hdfc",
+								"calvin"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "1 ReadHouse",
+			"item": [
+				{
+					"name": "11 invoke ReadHouse \"1\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"ReadHouse\",\n  \"args\": [\"1\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "2 CreateHouse",
+			"item": [
+				{
+					"name": "21 invoke HouseExists \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"HouseExists\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "22 invoke CreateHouse \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"CreateHouse\",\n  \"args\": [\"9\",\"Laurent\",\"200000\",\"HouseCreated\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "23 invoke HouseExists \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"HouseExists\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "24 invoke ReadHouse \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"ReadHouse\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "3 TransferHouse",
+			"item": [
+				{
+					"name": "31 invoke TransferHouse \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"TransferHouse\",\n  \"args\": [\"9\",\"Mathieu\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "32 invoke ReadHouse \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"ReadHouse\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "4 QueryHousesByOwner",
+			"item": [
+				{
+					"name": "41 invoke QueryHousesByOwner \"Laurent\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"QueryHousesByOwner\",\n  \"args\": [\"Laurent\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "5 QueryHouses",
+			"item": [
+				{
+					"name": "51 invoke QueryHouses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"QueryHouses\",\n  \"args\": [\"{\\\"selector\\\":{\\\"owner\\\":\\\"Mathieu\\\"}}\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "52 invoke QueryHouses",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"QueryHouses\",\n  \"args\": [\"{\\\"selector\\\":{\\\"price\\\":{\\\"$gt\\\":200000}}}\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "6 QueryTotalPriceByOwner",
+			"item": [
+				{
+					"name": "61 invoke QueryTotalPriceByOwner \"Laurent\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"QueryTotalPriceByOwner\",\n  \"args\": [\"Laurent\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "7 CreateEvent",
+			"item": [
+				{
+					"name": "71 invoke CreateEvent",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"CreateEvent\",\n  \"args\": [\"9\",\"Extension\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "72 invoke GetHouseHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"GetHouseHistory\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "8 DeleteHouse",
+			"item": [
+				{
+					"name": "71 invoke DeleteHouse \"9\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"DeleteHouse\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "72 invoke GetHouseHistory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{ \"fcn\": \"GetHouseHistory\",\n  \"args\": [\"9\"],\n  \"userId\":\"calvin\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/api1/hdfc/invoke",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api1",
+								"hdfc",
+								"invoke"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
